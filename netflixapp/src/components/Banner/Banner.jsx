@@ -4,6 +4,10 @@ import "./Banner.scss"
 import api from '../../utils/axiosConfig'
 import requests from '../../utils/Request'
 
+import AddIcon from "@mui/icons-material/Add"
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+
+
 function Banner() {
   const [movie, setMovie] = useState([])
 
@@ -33,8 +37,8 @@ function Banner() {
           {movie?.name || movie?.original_name}
         </h1>
         <div className="banner-buttons">
-          <button className='banner-button'>Play</button>
-          <button className='banner-button'>My List</button>
+          <button className='banner-button button-play'><PlayArrowIcon/> Play</button>
+          <button className='banner-button button-add'><AddIcon/> My List</button>
         </div>
         <h1 className="banner-description">
           {truncateDescription(movie?.overview, 150)} </h1>

@@ -19,10 +19,14 @@ function Navbar() {
         return () => window.removeEventListener("scroll", transitionNavbar)
     }, [])
 
+    function handleBackHome() {
+        window.scrollTo(0)
+    }
+
     return (
     <div className={`nav ${show && 'nav-black'}`}>
         <div className="nav-content">
-            <img className='nav-logo' src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="" />
+            <img className='nav-logo' src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="" onClick={handleBackHome}/>
 
             <img className='nav-avatar' src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="" />
         </div>

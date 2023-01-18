@@ -1,11 +1,49 @@
 .row {
     color: #FFF;
     margin-left: 20px;
+    width: 98vw;
+    overflow-x: hidden;
+    background-color: #111;
+
+    .row-arrowLeft,
+    .row-arrowRight {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 160px;
+        background-color: rgba(0,0,0,0.6);
+        padding: 0 10px;
+        z-index: 2;
+        cursor: pointer;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .row-posters:hover {
+        .row-arrowLeft, .row-arrowRight {
+            opacity: 1;
+        }
+    }
+
+    .row-arrowLeft {
+        left: 0;
+    }
+
+    .row-arrowRight {
+        right: 0;
+    }
+
+    .row-arrowLeftLarge,
+    .row-arrowRightLarge {
+        height: 270px;
+    }
 
     .row-posters {
         display: flex;
         overflow-y: hidden;
         overflow-x: scroll;
+        align-items: center;
         padding: 20px;
 
         .row-poster{

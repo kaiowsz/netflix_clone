@@ -6,6 +6,7 @@
     position: relative;
     color: white;
     object-fit: cover;
+    margin-bottom: 15px;
 }
 
 @media (min-width: 800px) {
@@ -42,6 +43,10 @@
     background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.507), #111);
 }
 
+.banner-buttons {
+    display: flex;
+}
+
 .banner-button {
     cursor: pointer;
     color: #FFF;
@@ -49,14 +54,26 @@
     border: none;
     font-weight: 700;
     border-radius: 0.2vw;
-    padding: 0.5rem 2rem;
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
     margin-right: 1rem;
     background-color: rgba(51, 51, 51, 0.5);
+    
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    
 }
 
-.banner-button:hover {
-    // background-color: rgba(51, 51, 51, 0.842);
+.button-play {
     transition: all .3s;
     color: rgb(34, 34, 34);
     background-color: #E6E6E6;
+}
+.button-play:hover {
+    background-color: #bebdbd;
+}
+
+.button-add:hover {
+    background-color: rgba(41, 41, 41, 0.5);
 }
